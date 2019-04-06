@@ -1,7 +1,7 @@
 // JavaScript Document
 window.fbAsyncInit = function () {
     FB.init({
-        appId: '367701870484678',
+        appId: '//Your app ID',
         cookie: true,
         xfbml: true,
         version: 'v3.2'
