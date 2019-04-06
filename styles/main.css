@@ -1,0 +1,34 @@
+/* CSS Document */
+body {
+    margin: 0;
+    font-family: happy monkey,cursive;
+}
+.GeneralContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    width: 100%;
+}
+.LogoContainer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #4267b2;
+    border: 1px solid #29487d;
+}
+.LogoText {
+    font-size: 34px;
+    color: #ffffff;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
