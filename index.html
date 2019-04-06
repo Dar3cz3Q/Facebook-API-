@@ -3,35 +3,106 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <html lang="en">
+    
     <head>
-        <title></title>
+        
+        <title>FacebookAccount</title>
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chroma=1" />
 	    <meta name="description" content="" />
 	    <meta name="keywords" content="" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
         <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+        
         <link rel="stylesheet" href="styles/main.css" type="text/css">
+        
         <link rel="stylesheet" href="css/fontello.css" type="text/css">
         <link rel="stylesheet" href="css/animation.css" type="text/css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
         <script src="scripts/main.js"></script>
+        
     </head>
-    <body>
+    
+    <body onselectstart="return false;">
+        
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-        <div class="GeneralContainer">
+        
+        <div class="GeneralContainer Flex_Style Flex_Style--column">
+            
             <header>
-                <div class="LogoContainer">
-                    <div>
+                
+                <div class="NavContainer Flex_Style Flex_Style--row">
+                    
+                    <div class="HeaderInformations HeaderInformations_bigger Flex_Style">
+                        
                         <span class="LogoText"><i class="icon-facebook"></i>Facebook Account Informations</span>
+                        
                     </div>
-                    <fb:login-button
-                        scope="public_profile,email"
-                        onlogin="">
-                    </fb:login-button>
+                    
+                    <div class="FacebookButtons HeaderInformations HeaderInformations_smaller Flex_Style">
+                    
+                        <div id="FacebookLoginButton" class="Flex_Style">
+                        
+                            <fb:login-button class="Facebook_Login_Button" size="xlarge" scope="public_profile,email,user_birthday,user_location" onlogin="checkLoginState();"></fb:login-button>
+                        
+                        </div>
+                        
+                        <div id="FacebookLogoutButton" class="Flex_Style Hidden_Element">
+                        
+                            <div class="FacebookLogout Flex_Style">
+                        
+                                <a href="#" class="LogoutText" onclick="logout()">Logout</a>
+                            
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                    
                 </div>
+                
             </header>
+            
+            <main>
+                
+                <div class="MainContainer Flex_Style Flex_Style--column">
+                    
+                    <div id="NotLoggedInformations" class="NotLoggedInformationText Flex_Style Flex_Style--column">
+                        
+                        <div class="TipInformationContainer WarningNotes FirstNote Flex_Style Flex_Style--column">
+                            
+                            <h1 class="NotLoggedText">Log in to display your account</h1>
+                            
+                            <h2 class="NotLoggedText">The informations are only displayed</h2>
+                        
+                        </div>
+                        
+                        <div class="PrivacyInformationContainer WarningNotes SecondNote Flex_Style Flex_Style--column">
+                            
+                            <span class="WarningDistractionText">Note</span>
+                            
+                            <span><b>FacebookAccount</b> is not supported by <b>Facebook</b> and does not reflect views or opinions. The site is created by a private person. No data is collected on it. The login process is done using the official Facebook plugin.</span>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="Profile" class="LoggedInformations Flex_Style Flex_Style--column Hidden_Element">
+                        
+                    </div>
+                
+                </div>
+                
+            </main>
+            
         </div>
+        
     </body>
+    
 </html>

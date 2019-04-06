@@ -1,34 +1,234 @@
 /* CSS Document */
 body {
     margin: 0;
-    font-family: happy monkey,cursive;
+    font-family: happy monkey, cursive;
+    background-color: #e9ebee;
+    cursor: default;
+}
+.Loader {
+    width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 72px;
+	left: 0;
+	z-index: 100;
+    background-color: #e9ebee;
+    overflow: hidden;
+}
+.letter {
+    display: inline;
+	font-family: "Happy Monkey", cursive;
+	font-size: 100px;
+	animation: loader 1.6s ease-in-out infinite;
+	opacity: 0;
+}
+.letter:nth-child(2) {
+	animation-delay: 100ms;
+}
+.letter:nth-child(3) {
+	animation-delay: 200ms;
+}
+.letter:nth-child(4) {
+	animation-delay: 300ms;
+}
+.letter:nth-child(5) {
+	animation-delay: 400ms;
+}
+.letter:nth-child(6) {
+	animation-delay: 500ms;
+}
+.letter:nth-child(7) {
+	animation-delay: 600ms;
+}
+ @keyframes loader {
+     0% {
+         opacity: 1;
+    }
+     100% {
+         opacity: 0;
+    }
+}
+.Hidden_Element {
+    display: none;
 }
 .GeneralContainer {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
 }
 header {
     width: 100%;
 }
-.LogoContainer {
+main {
     width: 100%;
-    height: 70px;
+}
+.Flex_Style {
     display: flex;
-    flex-direction: row;
     align-content: center;
     align-items: center;
     justify-content: center;
+}
+.Flex_Style--row {
+    flex-direction: row;
+}
+.Flex_Style--column {
+    flex-direction: column;
+}
+.NavContainer {
+    width: 100%;
+    height: 70px;
     background-color: #4267b2;
     border: 1px solid #29487d;
+}
+.HeaderInformations_bigger {
+    width: 90%;
+}
+.HeaderInformations_smaller {
+    width: 10%;
 }
 .LogoText {
     font-size: 34px;
     color: #ffffff;
     font-weight: 900;
     letter-spacing: 2px;
+}
+.Facebook_Login_Button {
+    width: 100%;
+}
+.MainContainer {
+    width: 100%;
+    height: auto;
+}
+.NotLoggedInformationText {
+    width: 50%;
+    height: 500px;
+    padding: 20px;
+}
+.NotLoggedText {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.PrivacyInformationContainer {
+    width: 50%;
+    height: auto;
+}
+.WarningNotes {
+    width: 70%;
+    padding: 20px;
+    border: 1px solid rgb(221, 223, 226);
+    background-color: #fff;
+}
+.FirstNote {
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 1px solid #dddfe2;
+    background-color: #f5f6f7;
+}
+.SecondNote {
+    border-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+.Seperating_Line {
+    width: 100%;
+    height: 1px;
+    margin: 20px 0px;
+    background-color: #8B8989;
+}
+.LoggedInformations {
+    width: 50%;
+    padding: 20px;
+}
+.FacebookLogout {
+    height: 39px;
+    width: 123px;
+    transition: .1s ease-in-out;
+}
+.FacebookLogout:hover {
+    background-color: #3156a1;
+}
+.LogoutText {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 900;
+    text-decoration: none;
+}
+.UserProfile {
+    width: 100%;
+}
+.BasicInformations {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(221, 223, 226);
+    background-color: #f5f6f7;
+}
+.UserName {
+    width: auto;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-weight: 900;
+}
+.UserId {
+    width: auto;
+    height: 20px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.UserInformations {
+    width: 100%;
+}
+.PostInformations {
+    width: 100%;
+}
+.UserTechnical {
+    width: 50%;
+}
+.ProfileInformationsHeader {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+.ProfileInformationsText {
+    font-size: 20px;
+    padding: 10px;
+    margin: 15px 0px 0px 0px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid rgb(221, 223, 226);
+}
+.ProfileInformationsText:hover {
+    
+}
+.ProfileInformationsText:first-child {
+    margin-top: 0px;
+}
+.Sorted_Items {
+    max-height: 350px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+.LikedName {
+    font-weight: 900;
+}
+.LikedTime {
+    font-size: 12px;
+    color: #111111;
+}
+.PostDesc {
+    font-weight: 900;
+}
+.PostTime {
+    font-size: 12px;
+    color: #111111;
+}
+.Private_Data {
+    color: #FF0000;
+}
+.Link {
+    color: initial;
+    text-decoration: none;
+}
+.WarningDistractionText {
+    color: #FF0000;
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 19px;
 }
